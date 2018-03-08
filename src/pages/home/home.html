@@ -1,14 +1,27 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Calculadora
+      Gas ou Etanol
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  Meu app Calculadora
-  <p>
-    
-  </p>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" floating>Preço Gasolina</ion-label>
+      <ion-input [(ngModel)]="precoGas"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Preço Etanol</ion-label>
+      <ion-input [(ngModel)]="precoEtanol"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="calcula()">Compara</button>
+  <ion-fab center="" middle="">
+    <button ion-fab color="danger" (click)="limpar()">CLS</button>
+  </ion-fab>
+  <ion-item>
+    {{razao}}
+  </ion-item>
 </ion-content>
